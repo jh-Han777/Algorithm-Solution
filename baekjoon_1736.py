@@ -2,9 +2,10 @@ n,m = list(map(int,input().split()))
 tmp = [list(map(int,input().split())) for _ in range(n)]
 answer = 0
 
-now = (-1,-1)
+
 while True:
     trash = 0
+    now = (-1,-1)
     for y in range(n):
         for x in range(m):
             if tmp[y][x] == 1:
@@ -19,7 +20,6 @@ while True:
                     now = (y,x)
                 else:
                     pass
-    now = (-1,-1)
     if trash ==0:
         break
 
