@@ -13,7 +13,7 @@ class DFS(object):
 
     def dfs(self,y,x):
         if y <= -1 or y >= n or x <= -1 or x >= n:
-            return False
+            return None
         if graph[y][x] == 1:
             self.num_group += 1
             graph[y][x] = 0
@@ -28,7 +28,7 @@ for j in range(n):
     for i in range(n):
         num = dfs.dfs(j,i)
 
-        if num == False or num == None:
+        if num == None:
             continue
 
         if num > 0:
